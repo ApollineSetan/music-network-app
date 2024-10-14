@@ -1,38 +1,75 @@
-.App {
+body {
+  background-image : url("C:\Users\setan\Pictures\pexels-photo-1481244.jpeg");
+  background-attachment: fixed;/* L'image ne bouge pas au fond */ 
+  background-color: #1E1E1E;
+  background-size: contain; /* L'image n'est pas déformée */
+  background-repeat: no-repeat; /* L'image ne se répétera pas */
+  color: #ffffff;
+}
+
+.container {
+  background: linear-gradient(#006A6D, #1E1E1E); /* Fond dégradé teal & anthracite */
+  max-width: 400px; /* Définit la largeur du container */
+  margin: auto;
+  padding: 235px; /* Définit la hauteur entre la bordure et le texte h1 */
+  border-radius: 10px; /* Définit l'arrondis des coins */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre derrière le container */
+}
+
+h1 {
+  font-size: 35px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container {
+  margin-top: 20px; /* Définit la hauteur entre la bordure du formulaire et le texte */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Organise les élèments en colonnes */
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  margin-bottom: 15px; /* Écart entre les inputs */
+  padding: 15px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.176);
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  outline: none; /* Supprime l'outline par défaut */
+  border: 1px solid rgba(255, 255, 255, 0.337);
+  color: #ffffff; /* Couleur du texte qui change quand on clique et tape du texte*/
+  transform: scale(1.05); /* Augmente légèrement la taille des inputs*/
+  transition: transform 0.5s; /* Animation douce */
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.762);
+}
+
+button {
+  padding: 10px;
+  height: 35px; /* Hauteur du bouton */
+  background-color: rgba(255, 255, 255, 0.176);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; /* Affiche un index qui pointe le bouton */
+}
+
+button:hover {
+  background-color: #F0C022;
+  color: #024f51;
+  transform: scale(1.06); /* Le bouton s'agrandit quand je balade ma souris dessus */
+  transition: transform .5s; /* Transition douce */
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgba(255, 255, 255, 0.762);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.6px;
 }
